@@ -1,0 +1,17 @@
+{
+  "name": "first_electron_app",
+  "version": "1.0.0",
+  "description": "The first app on electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Trevinno",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "^16.5.0",
+    "electron": "^6.0.12",
+    "react-scripts": "^3.2.0",
+    "uniq": "^1.0.1"
+  }
+}

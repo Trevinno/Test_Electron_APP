@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Agregar Material para compra</title>
+</head>
+<body>
+    <form> 
+        <div>
+            <input type="text" id="item" autofocus> 
+        </div>
+        <button type="submit" > Add Item</button>
+
+    <script type="module" src="main.js">
+        const electron  = require('electron');
+        const {ipcRenderer} = electron;
+
+        const form = document.querySelector('form');
+        form.addEventListener('submit', submitForm);
+
+        function submitForm(e) {
+            e.preventDefault();
+            console.log('123');
+            const item = document.querySelector('#item').value;
+            ipcRenderer.sned('item:add', item)
+        }
+    </script>
+</body>
+</html>
